@@ -1,0 +1,111 @@
+
+.calculator{
+    text-align: center;
+}
+
+.titles{
+    text-align: center;
+}
+.calculator{
+    background-color:  mintcream;
+}
+.numberDigit{
+    margin: 23%;
+}
+input button{
+    padding: 5%;
+}
+.calculatorButtons input{
+    color: white;
+    background-color: darkslategray;
+    text-align: center;
+    line-height: 30%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 24%;
+    margin: 3%;
+    font-size: min(2.5vh, 20px);
+}
+
+.calculatorButtons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.calculatorButtons, button{
+    margin-top: 2vh;
+}
+.number{
+    padding: 4vh;
+}
+.split{
+    color:white;
+    margin: 1%;
+    padding: 3vh;
+    border-radius: 50%;
+    background-color: #f28500;
+    font-size: min(2.5vh, 20px);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+html,body{
+    font-family: sans-serif;
+}
+
+.split:focus{
+    color:white;
+    font-size: min(2.5vh, 20px);
+    background-color: #ffb300;
+}
+.input{
+    transition: margin-left 0.3s;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+
+}
+.roundRadioButtons{
+    display:inline-flex;
+    overflow:hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+}
+.roundButtons{
+display: none;
+}
+
+.radio_label{
+    padding: 8px 14px;
+    font-size: 14px;
+    font-family:sans-serif;
+    color: #ffffff;
+    background: #009578;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.radio_label:not(:last-of-type){
+    border-right: 1px solid #006B56;
+}
+.roundButtons:checked + .radio_label{
+    background: #ff4200;
+}
+
+
+
+
+#input{
+    font-size: 2em;
+    background-color: white;
+    margin-bottom: 3%;
+
+}
+#result{
+    font-size:2em;
+}
+#finalStatement{
+    font-size: 0.6em;
+}
