@@ -76,26 +76,26 @@ function handlers() {
     }
 
 
-  /*  function tipCheck(){
-        let answer = model.applyTip();
-        if(!isNaN(answer)){
-            //model.clearDisplay()
-            view.showValueInField(view.getResultFieldId(), model.applyTip());
-        }
-        else{
-            window.alert("Please split bill first");
-        }
-    }
+    /*  function tipCheck(){
+          let answer = model.applyTip();
+          if(!isNaN(answer)){
+              //model.clearDisplay()
+              view.showValueInField(view.getResultFieldId(), model.applyTip());
+          }
+          else{
+              window.alert("Please split bill first");
+          }
+      }
 
-    function roundCheck(){
-        let answer = model.roundForEach();
-        if(!isNaN(answer)){
-            view.showValueInField(view.getResultFieldId(), model.roundForEach());
-        }
-        else{
-            window.alert("Please split bill first");
-        }
-    } */
+      function roundCheck(){
+          let answer = model.roundForEach();
+          if(!isNaN(answer)){
+              view.showValueInField(view.getResultFieldId(), model.roundForEach());
+          }
+          else{
+              window.alert("Please split bill first");
+          }
+      } */
 }
 
 

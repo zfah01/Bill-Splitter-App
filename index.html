@@ -21,11 +21,34 @@
 
 <div class="calculator">
     <div class = "input">
-        <p>Total Bill: </p>
+        <p class="titles"><b>Total Bill: </b></p>
         <span  id = "input"  class="initialInput"></span>
+        <p id="rH" class="titles"><b>Split Bill:</b> </p>
+        <span  id = "result" class="result"></span>
     </div>
 
+    <p id="tips"><i> Tip:</i> </p>
+    <div class = "radioTipButtons">
+            <input type="radio" name="tipButton" class="tipButtons" id="tip0" value = "0" checked="checked">
+        <label class="radioT_label" for="tip0">0%</label>
+                <input type="radio" name="tipButton" class="tipButtons" id="tip5" value = "5">
+        <label class="radioT_label" for="tip5">5%</label>
+                <input type="radio" name="tipButton" class="tipButtons" id="tip10" value = "10">
+        <label class="radioT_label" for="tip10">10%</label>
+                <input type="radio" name="tipButton" class="tipButtons" id="tip15" value = "15">
+        <label class="radioT_label" for="tip15">15%</label>
+                <input type="radio" name="tipButton" class="tipButtons" id="tip20"  value = "20">
+        <label class="radioT_label" for="tip20">20%</label>
 
+    </div>
+
+    <div class="splitButtons">
+        <button name="splitButton" value="2" class="split" id="split2">2 &#128113;</button>
+        <button name="splitButton" value="3" class="split" id="split3">3 &#128113;</button>
+        <button name="splitButton" value="4" class="split" id="split4">4 &#128113;</button>
+        <button name="splitButton" value="5" class="split" id="split5">5 &#128113;</button>
+
+    </div>
     <div class="calculatorButtons">
         <input type="button" name="numberDigit" class="number" value="7" id="7"/>
         <input type="button" name="numberDigit" class="number" value="8" id="8"/>
@@ -46,29 +69,9 @@
         <input type="button" value="C" class="number"  id="ClearButton"/>
 
     </div>
-    <div class = "tipButtons">
-        <form id = tip>
-        <p id="tips"> Tip: <input type="radio" name="tipButton" class="tipButtons" id="tip0" value = "0" checked="checked"> 0%
-            <input type="radio" name="tipButton" class="tipButtons" id="tip5" value = "5"> 5%
-            <input type="radio" name="tipButton" class="tipButtons" id="tip10" value = "10"> 10%
-            <input type="radio" name="tipButton" class="tipButtons" id="tip15" value = "15"> 15%
-            <input type="radio" name="tipButton" class="tipButtons" id="tip20"  value = "20"> 20%
-        </p>
-        </form>
-    </div>
-    <div class="calculatorButtons">
-        <button name="splitButton" value="2" class="split" id="split2">2 &#128113;</button>
-        <button name="splitButton" value="3" class="split" id="split3">3 &#128113;</button>
-        <button name="splitButton" value="4" class="split" id="split4">4 &#128113;</button>
-        <button name="splitButton" value="5" class="split" id="split5">5 &#128113;</button>
-
-    </div>
 
 
-    <div class = "output">
-        <p>Bill for each person </p>
-        <span  id = "result" class="splitBill" class="result"></span>
-    </div><p id="round"> Round to:</p>
+    <p id="round"><i>Round to:</i> </p>
     <div class = "roundRadioButtons">
         <input type="radio" name="roundButton" class="roundButtons" id="r1" value = "1" checked="checked">
         <label class="radio_label" for="r1">£1</label>

@@ -43,12 +43,12 @@ class Model{
 
 
 
-   getSplit(){
+    getSplit(){
         this.splitAnswer = this.currentValue/ this.splitValue;
         //this.tip = this.answer + this.tip / 100;
         //this.answer = this.answer + this.tip;
-       document.getElementById("splitAns").innerHTML = this.splitAnswer.toFixed(2);
-       return this.splitAnswer.toFixed(2);
+        document.getElementById("splitAns").innerHTML = this.splitAnswer.toFixed(2);
+        return this.splitAnswer.toFixed(2);
     }
 
     applyTip(){
@@ -73,7 +73,3 @@ class Model{
 
 
 }
-
-
-
-
