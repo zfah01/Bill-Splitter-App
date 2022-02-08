@@ -24,6 +24,7 @@ function handlers() {
     let tipOption = view.getTipButtons();
     for (let i = 0; i < tipOption.length; i++) {
         addTipRadioListener(tipOption[i].id);
+
     }
 
     let roundValue = view.getRoundButtons();
@@ -44,7 +45,6 @@ function handlers() {
         view.callButtonListener(id, () => {
             model.updateCurrentValue(id);
             view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
-            addTipRadioListener();
         });
 
     }
@@ -53,7 +53,9 @@ function handlers() {
         view.callRadioListener(id, () => {
             model.setTip(view.getValueById(id));
             localStorage.tip = view.getIdOfSelectedOption(id);
-            view.showValueInField(view.getResultFieldId(), model.applyTip());
+           // model.setTipStorage(view.getTip());
+            splitButtonPressed();
+            //view.showValueInField(view.getResultFieldId(), model.getAnswer());
             //tipCheck();
         });
     }
@@ -61,7 +63,8 @@ function handlers() {
     function addSplitButtonListener(id) {
         view.callButtonListener(id, () => {
             model.setSplitValue(view.getValueById(id));
-            view.showValueInField(view.getResultFieldId(), model.getSplit());
+            splitButtonPressed();
+            //view.showValueInField(view.getResultFieldId(), model.getAnswer());
             //tipCheck();
         });
     }
@@ -69,34 +72,32 @@ function handlers() {
     function addRoundRadioListener(id) {
         view.callRadioListener(id, () => {
             model.setRoundValue(view.getValueById(id));
-            localStorage.roundValue = view.getIdOfSelectedOption(id);
-            view.showValueInField(view.getResultFieldId(), model.roundForEach());
+            //localStorage.roundValue = view.getIdOfSelectedOption(id);
+            //view.showValueInField(view.getResultFieldId(), model.roundForEach());
+            splitButtonPressed();
             //roundCheck();
         });
     }
 
+    function valuesFromStorage(){
+        let selectedTip = localStorage.tip || 0;
+        view.setSelectionToIndex(tipOption, selectedTip);
+        model.setTip(view.getValueById(tipOption));
+    }
 
-    /*  function tipCheck(){
-          let answer = model.applyTip();
-          if(!isNaN(answer)){
-              //model.clearDisplay()
-              view.showValueInField(view.getResultFieldId(), model.applyTip());
-          }
-          else{
-              window.alert("Please split bill first");
-          }
-      }
-
-      function roundCheck(){
-          let answer = model.roundForEach();
-          if(!isNaN(answer)){
-              view.showValueInField(view.getResultFieldId(), model.roundForEach());
-          }
-          else{
-              window.alert("Please split bill first");
-          }
-      } */
 }
+
+    function splitButtonPressed() {
+        let answer = model.getAnswer();
+        if (!isNaN(answer)) {
+            view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
+            view.showValueInField(view.getResultFieldId(), model.getAnswer());
+        }
+    }
+
+
+
+
 
 
 

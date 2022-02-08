@@ -22,6 +22,19 @@ class Model{
         document.getElementById("splitVal").innerHTML = this.splitValue;
     }
 
+
+    setTipStorage(tip){
+        localStorage.setItem("tip",tip);
+    }
+
+    getTipStorage(){
+        if(localStorage.getItem("tip")=== null){
+            return 0;
+        } else{
+            return localStorage.getItem("tip");
+        }
+    }
+
     setRoundValue(roundValue){
         this.roundValue = roundValue;
         document.getElementById("roundVal").innerHTML = this.roundValue;
@@ -37,25 +50,25 @@ class Model{
         return this.currentValue;
     }
 
+
     clearDisplay(){
         this.currentValue = "";
     }
 
-
-
-    getSplit(){
+/*
+   getSplit(){
         this.splitAnswer = this.currentValue/ this.splitValue;
         //this.tip = this.answer + this.tip / 100;
         //this.answer = this.answer + this.tip;
-        document.getElementById("splitAns").innerHTML = this.splitAnswer.toFixed(2);
-        return this.splitAnswer.toFixed(2);
+       document.getElementById("splitAns").innerHTML = this.splitAnswer.toFixed(2);
+       return this.splitAnswer;
     }
 
     applyTip(){
-        this.findTip = this.splitAnswer * this.tip / 100;
-        this.tipAnswer = this.splitAnswer + this.findTip;
-        return this.tipAnswer.toFixed(2);
+        this.tipAnswer = this.splitAnswer *(1+(this.tip/100));;
+        return this.tipAnswer;
     }
+
 
 
     roundForEach(){
@@ -66,10 +79,33 @@ class Model{
         document.getElementById("tipPercent").innerHTML = this.tipPercentage;
         document.getElementById("roundAns").innerHTML = this.roundAnswer;
         return this.roundAnswer;
+    } */
+
+    getAnswer(){
+
+       this.splitWithNoTip = this.currentValue/this.splitValue;
+       this.splitWithTip = this.splitWithNoTip *(1+(this.tip/100));
+       this.splitWithTipRounded = Math.ceil(this.splitWithTip/this.roundValue)*this.roundValue;
+
+
+        document.getElementById("splitAns").innerHTML = this.splitWithNoTip.toFixed(2);
+        this.tipAfterRound = this.splitWithTipRounded- this.splitWithNoTip;
+        this.tipPercentage  = Math.ceil((this.tipAfterRound / this.splitWithNoTip * 100));
+        document.getElementById("tipAns").innerHTML = this.tipAfterRound.toFixed(2);
+        document.getElementById("tipPercent").innerHTML = this.tipPercentage;
+        document.getElementById("roundAns").innerHTML = this.splitWithTipRounded;
+
+       return this.splitWithTipRounded;
     }
 
 
 
 
 
+
+
 }
+
+
+
+

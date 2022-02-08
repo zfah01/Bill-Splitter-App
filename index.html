@@ -21,26 +21,13 @@
 
 <div class="calculator">
     <div class = "input">
+        <img id="settings" src="images/settings.png" alt="settings"/>
         <p class="titles"><b>Total Bill: </b></p>
         <span  id = "input"  class="initialInput"></span>
         <p id="rH" class="titles"><b>Split Bill:</b> </p>
         <span  id = "result" class="result"></span>
     </div>
 
-    <p id="tips"><i> Tip:</i> </p>
-    <div class = "radioTipButtons">
-            <input type="radio" name="tipButton" class="tipButtons" id="tip0" value = "0" checked="checked">
-        <label class="radioT_label" for="tip0">0%</label>
-                <input type="radio" name="tipButton" class="tipButtons" id="tip5" value = "5">
-        <label class="radioT_label" for="tip5">5%</label>
-                <input type="radio" name="tipButton" class="tipButtons" id="tip10" value = "10">
-        <label class="radioT_label" for="tip10">10%</label>
-                <input type="radio" name="tipButton" class="tipButtons" id="tip15" value = "15">
-        <label class="radioT_label" for="tip15">15%</label>
-                <input type="radio" name="tipButton" class="tipButtons" id="tip20"  value = "20">
-        <label class="radioT_label" for="tip20">20%</label>
-
-    </div>
 
     <div class="splitButtons">
         <button name="splitButton" value="2" class="split" id="split2">2 &#128113;</button>
@@ -69,7 +56,20 @@
         <input type="button" value="C" class="number"  id="ClearButton"/>
 
     </div>
+    <p id="tips"><i> Tip:</i> </p>
+    <div class = "radioTipButtons">
+        <input type="radio" name="tipButton" class="tipButtons" id="tip0" value = "0" checked="checked">
+        <label class="radioT_label" for="tip0">0%</label>
+        <input type="radio" name="tipButton" class="tipButtons" id="tip5" value = "5">
+        <label class="radioT_label" for="tip5">5%</label>
+        <input type="radio" name="tipButton" class="tipButtons" id="tip10" value = "10">
+        <label class="radioT_label" for="tip10">10%</label>
+        <input type="radio" name="tipButton" class="tipButtons" id="tip15" value = "15">
+        <label class="radioT_label" for="tip15">15%</label>
+        <input type="radio" name="tipButton" class="tipButtons" id="tip20"  value = "20">
+        <label class="radioT_label" for="tip20">20%</label>
 
+    </div>
 
     <p id="round"><i>Round to:</i> </p>
     <div class = "roundRadioButtons">

@@ -87,6 +87,12 @@ html,body{
     justify-content: center;
 
 }
+#settings{
+    height: 10%;
+    width: 10%;
+    margin-top: 1vh;
+    margin-left: 0.5vh;
+}
 
 
 .roundRadioButtons{

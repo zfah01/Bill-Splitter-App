@@ -24,6 +24,9 @@ class View{
         return document.getElementsByName('tipButton');
     }
 
+
+
+
     getRoundButtons(){
         return document.getElementsByName('roundButton');
 
@@ -55,14 +58,6 @@ class View{
 
     getInputFieldId(){
         return 'input';
-    }
-
-    getTip(){
-        return 'tip';
-    }
-
-    getStatementFieldId(){
-        return 'finalStatement';
     }
 
 
