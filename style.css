@@ -21,7 +21,7 @@ input[type="button"]:active {
 input button{
     padding: 5%;
 }
-.calculatorButtons input{
+.numberButtons input{
     color: white;
     background-color: darkslategray;
     text-align: center;
@@ -33,7 +33,7 @@ input button{
     font-size: min(2.5vh, 20px);
 }
 
-.calculatorButtons{
+.numberButtons{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -50,7 +50,7 @@ input button{
     justify-content: center;
 }
 
-.calculatorButtons, button{
+.numberButtons, button{
     margin-top: 2vh;
 }
 .number{
@@ -65,6 +65,7 @@ input button{
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+
 html,body{
     font-family: Helvetica,sans-serif;
 }
@@ -175,6 +176,6 @@ display: none;
     font-style: italic;
 }
 #tips{
-    margin-left: 5px;
+    margin-left: 2%;
     vertical-align: middle;
 }

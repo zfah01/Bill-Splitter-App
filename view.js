@@ -13,12 +13,6 @@ class View{
         return document.getElementsByName('splitButton');
     }
 
-    setSelectionToIndex(field, value) {
-        document.getElementById(field).selectedIndex = value;
-    }
-    getIdOfSelectedOption(field) {
-        return document.getElementById(field).selectedIndex;
-    }
 
     getTipButtons(){
         return document.getElementsByName('tipButton');
@@ -26,16 +20,10 @@ class View{
 
 
 
-
     getRoundButtons(){
         return document.getElementsByName('roundButton');
 
     }
-
-    getStatementId(){
-        return document.getElementById('statement');
-    }
-
 
     getValueById(id){
         return document.getElementById(id).value;
@@ -51,9 +39,6 @@ class View{
 
     showValueInField(field,value){
         document.getElementById(field).innerHTML = value;
-    }
-    getIdOfCurrentOption(field){
-        return document.getElementById(field).selectedIndex;
     }
 
     getInputFieldId(){

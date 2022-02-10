@@ -7,6 +7,7 @@ const model = new Model();
 
 handlers();
 
+
 function handlers() {
 
 
@@ -15,6 +16,10 @@ function handlers() {
         addNumericButtonListener(element[i].id);
     }
 
+
+
+
+
     let splitButton = view.getSplitButtons();
     for (let i = 0; i < splitButton.length; i++) {
         addSplitButtonListener(splitButton[i].id);
@@ -22,78 +27,73 @@ function handlers() {
 
 
     let tipOption = view.getTipButtons();
+    let value = localStorage.getItem("tip");
     for (let i = 0; i < tipOption.length; i++) {
         addTipRadioListener(tipOption[i].id);
 
+        if(tipOption[i].value === value){
+            tipOption[i].checked = true;
+        }
+
     }
 
-    let roundValue = view.getRoundButtons();
-    for (let i = 0; i < roundValue.length; i++) {
-        addRoundRadioListener(roundValue[i].id);
+
+    let roundOption = view.getRoundButtons();
+    let val = localStorage.getItem("round");
+    for (let i = 0; i < roundOption.length; i++) {
+        addRoundRadioListener(roundOption[i].id);
+
+        if(roundOption[i].value === val){
+            roundOption[i].checked = true;
+        }
     }
 
 
-    //handler for clear button
     view.callButtonListener(view.getClearButtonId(), () => {
         model.clearDisplay();
         view.showValueInField(view.getResultFieldId(), model.getCurrentValue());
         view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
     });
 
-
-    function addNumericButtonListener(id) {
-        view.callButtonListener(id, () => {
-            model.updateCurrentValue(id);
-            view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
-        });
-
     }
 
-    function addTipRadioListener(id) {
-        view.callRadioListener(id, () => {
-            model.setTip(view.getValueById(id));
-            localStorage.tip = view.getIdOfSelectedOption(id);
-           // model.setTipStorage(view.getTip());
-            splitButtonPressed();
-            //view.showValueInField(view.getResultFieldId(), model.getAnswer());
-            //tipCheck();
-        });
-    }
-
-    function addSplitButtonListener(id) {
-        view.callButtonListener(id, () => {
-            model.setSplitValue(view.getValueById(id));
-            splitButtonPressed();
-            //view.showValueInField(view.getResultFieldId(), model.getAnswer());
-            //tipCheck();
-        });
-    }
-
-    function addRoundRadioListener(id) {
-        view.callRadioListener(id, () => {
-            model.setRoundValue(view.getValueById(id));
-            //localStorage.roundValue = view.getIdOfSelectedOption(id);
-            //view.showValueInField(view.getResultFieldId(), model.roundForEach());
-            splitButtonPressed();
-            //roundCheck();
-        });
-    }
-
-    function valuesFromStorage(){
-        let selectedTip = localStorage.tip || 0;
-        view.setSelectionToIndex(tipOption, selectedTip);
-        model.setTip(view.getValueById(tipOption));
-    }
-
-}
-
-    function splitButtonPressed() {
+    function pressSplit() {
         let answer = model.getAnswer();
         if (!isNaN(answer)) {
             view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
             view.showValueInField(view.getResultFieldId(), model.getAnswer());
         }
     }
+
+function addNumericButtonListener(id) {
+    view.callButtonListener(id, () => {
+        model.updateCurrentValue(id);
+        view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
+    });
+
+}
+
+function addTipRadioListener(id) {
+    view.callRadioListener(id, () => {
+        model.setTip(view.getValueById(id));
+        pressSplit();
+    });
+}
+
+function addSplitButtonListener(id) {
+    view.callButtonListener(id, () => {
+        model.setSplitValue(view.getValueById(id));
+        pressSplit();
+    });
+}
+
+    function addRoundRadioListener(id) {
+        view.callRadioListener(id, () => {
+            model.setRoundValue(view.getValueById(id));
+            pressSplit();
+        });
+    }
+
 
 
 

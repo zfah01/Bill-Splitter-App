@@ -13,87 +13,83 @@
 </head>
 <body>
 <main>
-    <!-- Write your comments here <header>
-    <h1 class="titles">BILL SPLITTER</h1>
-    <p class="titles" >Enter total bill: </p>
-</header>-->
-
 
 <div class="calculator">
-    <div class = "input">
-        <img id="settings" src="images/settings.png" alt="settings"/>
-        <p class="titles"><b>Total Bill: </b></p>
-        <span  id = "input"  class="initialInput"></span>
-        <p id="rH" class="titles"><b>Split Bill:</b> </p>
-        <span  id = "result" class="result"></span>
-    </div>
+
+      <div class = "input">
+          <img id="settings" src="images/settings.png" alt="settings"/>
+          <p class="titles"><b>Total Bill: </b></p>
+          <span  id = "input"  class="initialInput"></span>
+          <p id="rH" class="titles"><b>Split Bill:</b> </p>
+          <span  id = "result" class="result"></span>
+      </div>
 
 
-    <div class="splitButtons">
-        <button name="splitButton" value="2" class="split" id="split2">2 &#128113;</button>
-        <button name="splitButton" value="3" class="split" id="split3">3 &#128113;</button>
-        <button name="splitButton" value="4" class="split" id="split4">4 &#128113;</button>
-        <button name="splitButton" value="5" class="split" id="split5">5 &#128113;</button>
+      <div class="splitButtons">
+          <button name="splitButton" value="2" class="split" id="split2">2 &#128113;</button>
+          <button name="splitButton" value="3" class="split" id="split3">3 &#128113;</button>
+          <button name="splitButton" value="4" class="split" id="split4">4 &#128113;</button>
+          <button name="splitButton" value="5" class="split" id="split5">5 &#128113;</button>
 
-    </div>
-    <div class="calculatorButtons">
-        <input type="button" name="numberDigit" class="number" value="7" id="7"/>
-        <input type="button" name="numberDigit" class="number" value="8" id="8"/>
-        <input type="button" name="numberDigit" class="number" value="9" id="9"/>
-    </div>
-    <div class="calculatorButtons">
-        <input type="button" name="numberDigit" class="number" value="6" id="6"/>
-        <input type="button" name="numberDigit" class="number" value="5" id="5"/>
-        <input type="button" name="numberDigit" class="number" value="4" id="4"/>
-    </div>
-    <div class="calculatorButtons">
-        <input type="button" name="numberDigit" class="number" value="3" id="3"/>
-        <input type="button" name="numberDigit" class="number" value="2" id="2"/>
-        <input type="button" name="numberDigit" class="number" value="1" id="1"/>
-    </div>
-    <div class="calculatorButtons">
-        <input type="button" name="numberDigit" class="number" value="0" id="0"/>
-        <input type="button" value="C" class="number"  id="ClearButton"/>
+      </div>
+      <div class="numberButtons">
+          <input type="button" name="numberDigit" class="number" value="7" id="7"/>
+          <input type="button" name="numberDigit" class="number" value="8" id="8"/>
+          <input type="button" name="numberDigit" class="number" value="9" id="9"/>
+      </div>
+      <div class="numberButtons">
+          <input type="button" name="numberDigit" class="number" value="6" id="6"/>
+          <input type="button" name="numberDigit" class="number" value="5" id="5"/>
+          <input type="button" name="numberDigit" class="number" value="4" id="4"/>
+      </div>
+      <div class="numberButtons">
+          <input type="button" name="numberDigit" class="number" value="3" id="3"/>
+          <input type="button" name="numberDigit" class="number" value="2" id="2"/>
+          <input type="button" name="numberDigit" class="number" value="1" id="1"/>
+      </div>
+      <div class="numberButtons">
+          <input type="button" name="numberDigit" class="number" value="0" id="0"/>
+          <input type="button" value="C" class="number"  id="ClearButton"/>
 
-    </div>
-    <p id="tips"><i> Tip:</i> </p>
-    <div class = "radioTipButtons">
-        <input type="radio" name="tipButton" class="tipButtons" id="tip0" value = "0" checked="checked">
-        <label class="radioT_label" for="tip0">0%</label>
-        <input type="radio" name="tipButton" class="tipButtons" id="tip5" value = "5">
-        <label class="radioT_label" for="tip5">5%</label>
-        <input type="radio" name="tipButton" class="tipButtons" id="tip10" value = "10">
-        <label class="radioT_label" for="tip10">10%</label>
-        <input type="radio" name="tipButton" class="tipButtons" id="tip15" value = "15">
-        <label class="radioT_label" for="tip15">15%</label>
-        <input type="radio" name="tipButton" class="tipButtons" id="tip20"  value = "20">
-        <label class="radioT_label" for="tip20">20%</label>
+      </div>
+      <p id="tips"><i> Tip:</i> </p>
+      <div class = "radioTipButtons">
+          <input type="radio" name="tipButton" class="tipButtons" id="tip0" value = "0" checked="checked">
+          <label class="radioT_label" for="tip0">0%</label>
+          <input type="radio" name="tipButton" class="tipButtons" id="tip5" value = "5">
+          <label class="radioT_label" for="tip5">5%</label>
+          <input type="radio" name="tipButton" class="tipButtons" id="tip10" value = "10">
+          <label class="radioT_label" for="tip10">10%</label>
+          <input type="radio" name="tipButton" class="tipButtons" id="tip15" value = "15">
+          <label class="radioT_label" for="tip15">15%</label>
+          <input type="radio" name="tipButton" class="tipButtons" id="tip20"  value = "20">
+          <label class="radioT_label" for="tip20">20%</label>
 
-    </div>
+      </div>
 
-    <p id="round"><i>Round to:</i> </p>
-    <div class = "roundRadioButtons">
-        <input type="radio" name="roundButton" class="roundButtons" id="r1" value = "1" checked="checked">
-        <label class="radio_label" for="r1">£1</label>
-            <input type="radio" name="roundButton" class="roundButtons" id="r5" value = "5">
-        <label class="radio_label" for="r5">£5</label>
-            <input type="radio" name="roundButton" class="roundButtons" id="r10" value = "10">
-        <label class="radio_label" for="r10">£10</label>
-            <input type="radio" name="roundButton" class="roundButtons" id="r20"  value = "20">
-        <label class="radio_label" for="r20">£20</label>
+      <p id="round"><i>Round to:</i> </p>
+      <div class = "roundRadioButtons">
+          <input type="radio" name="roundButton" class="roundButtons" id="r1" value = "1" checked="checked">
+          <label class="radio_label" for="r1">£1</label>
+              <input type="radio" name="roundButton" class="roundButtons" id="r5" value = "5">
+          <label class="radio_label" for="r5">£5</label>
+              <input type="radio" name="roundButton" class="roundButtons" id="r10" value = "10">
+          <label class="radio_label" for="r10">£10</label>
+              <input type="radio" name="roundButton" class="roundButtons" id="r20"  value = "20">
+          <label class="radio_label" for="r20">£20</label>
 
-    </div>
+      </div>
 
-    <div class = "statementArea">
-        <p  id = "finalStatement"> £<span id="currVal"></span> split <span id="splitVal"></span> ways is £<span id="splitAns"> </span> each. Adding a tip and rounding to <br>
-        nearest £<span id="roundVal"></span> gives £<span id="roundAns"></span> each including a tip of £<span id="tipAns"></span> or <span id="tipPercent"></span>% once rounded up.   </p>
-    </div>
-</div>
-</main>
+      <div class = "statementArea">
+          <p  id = "finalStatement"> £<span id="currVal"></span> split <span id="splitVal"></span> ways is £<span id="splitAns"> </span> each. Adding a tip and rounding to <br>
+          nearest £<span id="roundVal"></span> gives £<span id="roundAns"></span> each including a tip of £<span id="tipAns"></span> or <span id="tipPercent"></span>% once rounded up.   </p>
+      </div>
+  </div>v
+  </main>
 
 
-<script src="model.js"></script>
-<script src="view.js"></script>
-<script src="controller.js"></script>
-</body>
-</html>
+  <script src="model.js"></script>
+  <script src="view.js"></script>
+  <script src="controller.js"></script>
+  </body>
+  </html>
