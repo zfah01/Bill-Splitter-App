@@ -29,14 +29,6 @@
     margin-left: 0.5vh;
 }
 
-#open{
-    height: 10%;
-    width: 10%;
-    cursor:pointer;
-    margin-top: 1vh;
-    margin-left: 0.5vh;
-}
-
 #close{
     width: 1em;
     height: 1em;
