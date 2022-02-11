@@ -5,8 +5,6 @@
 class Model{
     constructor() {
         this.currentValue = "";
-        //this.currency = [];
-        //this.rates = [];
     }
 
 
@@ -53,7 +51,7 @@ class Model{
        this.splitWithTip = this.splitWithNoTip *(1+(this.tip/100));
        this.splitWithTipRounded = Math.ceil(this.splitWithTip/this.roundValue)*this.roundValue;
 
-       /*( if(visit === home){
+       /* if(visit === home){
             this.conversion = this.getAnswer();
         } else{
             this.conversion = Math.round((this.getAnswer() / visit) * home);

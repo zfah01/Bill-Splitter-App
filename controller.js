@@ -74,7 +74,7 @@ function handlers() {
     });
 
     }
-
+   //get answer when split
     function pressSplit() {
         let answer = model.getAnswer();
         if (!isNaN(answer)) {

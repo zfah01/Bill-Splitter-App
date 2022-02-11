@@ -52,7 +52,7 @@ class View{
     }
 
 
-
+   //get clear id
     getClearButtonId(){
         return 'ClearButton';
     }
