@@ -14,10 +14,192 @@
 <body>
 <main>
 
-<div class="calculator">
 
+    <div id="mySidenav" class="sidenav">
+        <img id="close" class="closebtn" onclick="closeNav()" src="images/close.png" alt="close"/>
+         <h2 id="exHeader">Exchange Currencies: </h2>
+        <div class = "visit">
+            <label id = "visitCurrency" class="nHeader"><b>Visiting</b>  </label>
+            <div class = "visitScroll">
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "AUD"> AUD
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "BGN"> BGN
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "CAD"> CAD
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "CHF"> CHF
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "CNY"> CNY
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "CZK"> CZK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "DKK"> DKK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "EUR" checked="checked"> EUR
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "GBP"> GBP
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "HRK"> HRK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "HUF"> HUF
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "ILS"> ILS
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "INR"> INR
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "JPY"> JPY
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "NOK"> NOK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "PLN"> PLN
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "RON"> RON
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "RUB"> RUB
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "SEK"> SEK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "TRY"> TRY
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "visitCurrency" value = "USD"> USD
+                </label>
+                <br>
+            </div>
+        </div>
+        <div class = "home">
+            <label id = "homeCurrency" class="nHeader"><b>Home</b>  </label>
+            <div class = "homeScroll">
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "AUD"> AUD
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "BGN"> BGN
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "CAD"> CAD
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "CHF"> CHF
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "CNY"> CNY
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "CZK"> CZK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "DKK"> DKK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "EUR"> EUR
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "GBP" checked = "checked"> GBP
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "HRK"> HRK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "HUF"> HUF
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "ILS"> ILS
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "INR"> INR
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "JPY"> JPY
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "NOK"> NOK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "PLN"> PLN
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "RON"> RON
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "RUB"> RUB
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "SEK"> SEK
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "TRY"> TRY
+                </label>
+                <br>
+                <label>
+                    <input type = "radio"  name = "homeCurrency" value = "USD"> USD
+                </label>
+                <br>
+            </div>
+        </div>
+        </div>
+    <div id="calculator" class="calculator">
       <div class = "input">
-          <img id="settings" src="images/settings.png" alt="settings"/>
+          <img id="open" src="images/settings.png" alt="settings"/>
           <p class="titles"><b>Total Bill: </b></p>
           <span  id = "input"  class="initialInput"></span>
           <p id="rH" class="titles"><b>Split Bill:</b> </p>
@@ -84,7 +266,7 @@
           <p  id = "finalStatement"> £<span id="currVal"></span> split <span id="splitVal"></span> ways is £<span id="splitAns"> </span> each. Adding a tip and rounding to <br>
           nearest £<span id="roundVal"></span> gives £<span id="roundAns"></span> each including a tip of £<span id="tipAns"></span> or <span id="tipPercent"></span>% once rounded up.   </p>
       </div>
-  </div>v
+  </div>
   </main>
 
 

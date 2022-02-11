@@ -7,6 +7,63 @@
     text-align: center;
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #D3D3D3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
+#open{
+    height: 10%;
+    width: 10%;
+    cursor:pointer;
+    margin-top: 1vh;
+    margin-left: 0.5vh;
+}
+
+#open{
+    height: 10%;
+    width: 10%;
+    cursor:pointer;
+    margin-top: 1vh;
+    margin-left: 0.5vh;
+}
+
+#close{
+    width: 1em;
+    height: 1em;
+    cursor:pointer;
+    margin-top: 1vh;
+    margin-left:4%;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+.visitScroll, .homeScroll{
+    margin-left: 5%;
+    margin-top: 3%;
+    background-color: white;
+    overflow: scroll;
+    height: 11rem;
+    width: 10rem;
+}
+
 input[type="button"]:active {
     background-color: #4F2F2F;
     color: #fff;
@@ -24,6 +81,7 @@ input button{
 .numberButtons input{
     color: white;
     background-color: darkslategray;
+    border-radius: 25px;
     text-align: center;
     line-height: 30%;
     border: none;
@@ -38,17 +96,11 @@ input button{
     flex-flow: row wrap;
     justify-content: center;
 }
-.splitButtons{
-    transition: 0.3s;
+.tipButtons, .roundButtons{
     float: right;
-    margin-top: 2.5%;
-    padding: 1vh;
-    background: white;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
 }
+
 
 .numberButtons, button{
     margin-top: 2vh;
@@ -58,6 +110,7 @@ input button{
 }
 .split{
     color:white;
+    border-radius: 25px;
     margin: 6%;
     padding: 3vh;
     background-color: #f28500;
@@ -88,13 +141,32 @@ html,body{
     justify-content: center;
 
 }
-#settings{
-    height: 10%;
-    width: 10%;
-    margin-top: 1vh;
-    margin-left: 0.5vh;
+
+
+#mySidenav .visit, .home{
+    padding: 1rem;
+    font-size: 1.25rem;
 }
 
+.splitButtons{
+    transition: 0.3s;
+    float: right;
+    margin-top: 2.5%;
+    padding: 1vh;
+    background: white;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+#exHeader{
+    text-align: center;
+    font-style: italic;
+}
 
 .roundRadioButtons{
     display:inline-flex;
@@ -113,6 +185,7 @@ html,body{
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
+
 
 
 

@@ -48,11 +48,29 @@ function handlers() {
         }
     }
 
+    let visit = view.getVisitList();
+    for(let i =0; i<visit.length;i++){
+        addVisitListListener(visit[i].id);
+    }
+
+    let home = view.getHomeList();
+    for(let i =0; i<home.length;i++){
+        addHomeListListener(home[i].id);
+    }
+
 
     view.callButtonListener(view.getClearButtonId(), () => {
         model.clearDisplay();
         view.showValueInField(view.getResultFieldId(), model.getCurrentValue());
         view.showValueInField(view.getInputFieldId(), model.getCurrentValue());
+    });
+
+    view.callButtonListener(view.getOpenNavId(), () => {
+        view.openNav();
+    });
+
+    view.callButtonListener(view.getCloseNavId(), () => {
+        view.closeNav();
     });
 
     }
@@ -80,12 +98,6 @@ function addTipRadioListener(id) {
     });
 }
 
-function addSplitButtonListener(id) {
-    view.callButtonListener(id, () => {
-        model.setSplitValue(view.getValueById(id));
-        pressSplit();
-    });
-}
 
     function addRoundRadioListener(id) {
         view.callRadioListener(id, () => {
@@ -94,8 +106,24 @@ function addSplitButtonListener(id) {
         });
     }
 
+function addVisitListListener(id) {
+    view.callRadioListener(id, () => {
+        view.getVisitCurrencies();
+    });
+}
 
+function addHomeListListener(id) {
+    view.callRadioListener(id, () => {
+        view.getHomeCurrencies();
+    });
+}
 
+function addSplitButtonListener(id) {
+    view.callButtonListener(id, () => {
+        model.setSplitValue(view.getValueById(id));
+        pressSplit();
+    });
+}
 
 
 

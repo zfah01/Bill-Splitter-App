@@ -5,8 +5,8 @@
 class Model{
     constructor() {
         this.currentValue = "";
-        this.rate1 = "";
-        this.rate2 = "";
+        //this.currency = [];
+        //this.rates = [];
     }
 
 
@@ -46,11 +46,19 @@ class Model{
     }
 
 
+
     getAnswer(){
 
        this.splitWithNoTip = this.currentValue/this.splitValue;
        this.splitWithTip = this.splitWithNoTip *(1+(this.tip/100));
        this.splitWithTipRounded = Math.ceil(this.splitWithTip/this.roundValue)*this.roundValue;
+
+       /*( if(visit === home){
+            this.conversion = this.getAnswer();
+        } else{
+            this.conversion = Math.round((this.getAnswer() / visit) * home);
+        }
+        document.getElementById("convAns").innerHTML = this.conversion; */
 
 
 
@@ -63,6 +71,7 @@ class Model{
 
        return this.splitWithTipRounded;
     }
+
 
 
 

@@ -57,6 +57,39 @@ class View{
         return 'ClearButton';
     }
 
+    openNav() {
+        document.getElementById("mySidenav").style.width = "80%";
+        document.getElementById("calculator").style.marginLeft = "20%";
+    }
+
+    closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("calculator").style.marginLeft= "0";
+    }
+
+    getCloseNavId(){
+        return 'close';
+    }
+    getOpenNavId(){
+        return 'open';
+    }
+
+    getVisitList(){
+        return document.getElementById("visitCurrency");
+    }
+
+    getHomeList(){
+        return document.getElementById("homeCurrency");
+    }
+
+    getVisitCurrencies(){
+    return document.getElementsByName("visitCurrency");
+
+}
+
+getHomeCurrencies(){
+    return document.getElementsByName("homeCurrency");
+}
 
 
 }
